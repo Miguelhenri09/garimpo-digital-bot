@@ -1,4 +1,4 @@
-import telegram
+from telegram.bot import Bot
 import time
 
 TOKEN = "7648778018:AAGxzOaesHp-nHhpoU6kmi3zUYBmIw80rVY"
