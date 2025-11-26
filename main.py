@@ -1,20 +1,19 @@
-import os
-os.system("pip uninstall -y telegram")  # remove a biblioteca errada
+from telegram import Bot
+from telegram.request import HTTPXRequest
+import asyncio
 
-from telegram.bot import Bot
-import time
-
-TOKEN = "7648778018:AAGxzOaesHp-nHhpoU6kmi3zUYBmIw80rVY"
+TOKEN = ""7648778018:AAGxzOaesHp-nHhpoU6kmi3zUYBmIw80rVY""
 CHAT_ID = "@GarimpoDigitalBr"
 
-bot = telegram.Bot(token=TOKEN)
-
-while True:
-    bot.send_message(
+async def main():
+    request = HTTPXRequest()
+    bot = Bot(token=TOKEN, request=request)
+    
+    await bot.send_message(
         chat_id=CHAT_ID,
-        text="⏰ Mensagem automática do Garimpo Digital!\nO bot está funcionando perfeitamente!"
+        text="🔥 Bot Garimpo Digital online!\nRodando 24h no Railway!"
     )
-
     print("Mensagem enviada!")
 
-    # time.sleep(60)  # espera 60 segundos para enviar de novo
+if __name__ == "__main__":
+    asyncio.run(main())
