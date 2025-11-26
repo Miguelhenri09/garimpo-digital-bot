@@ -1,3 +1,6 @@
+import os
+os.system("pip uninstall -y telegram")  # remove a biblioteca errada
+
 from telegram.bot import Bot
 import time
 
